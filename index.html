@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nothing</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		body {
+			position: relative;
+		}
+		.cat img {
+			width: 100vw;
+		}
+		.words {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.words span {
+			font-family: verdana;
+			font-size: 32px;
+			opacity: 0.8;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="cat"><img src="cat.gif" alt="Cat"></div>
+	<div class="words"><span></span></div>
+
+	<script type="text/javascript">
+		const words = document.querySelector('.words span');
+		const loading = 'Loading...'.split('');
+
+		let i = 0;
+		let interval = setInterval(function(){
+			words.innerHTML +=  loading[i++];
+			if (i === 11) {
+				words.innerHTML = '';
+				i = 0;
+			}
+		}, 300);
+		
+	</script>
+</body>
+</html>
