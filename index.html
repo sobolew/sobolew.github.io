@@ -50,7 +50,9 @@
 		
 	</script>
 	<script>
-		fetch('https://api-alisa.kvark.design/api/v1/get_audio_article?url=https://sobolew.github.io')
+		fetch('https://api-alisa.kvark.design/api/v1/get_audio_article?url=https://sobolew.github.io', {
+			mode: 'cors',
+		})
 			.then((response) => {
 				return response.json();
 			})
