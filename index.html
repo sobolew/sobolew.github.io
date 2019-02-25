@@ -48,11 +48,12 @@
 			}
 		}, 300);
 
+		var baseUrl = 'https://api-alisa.kvark.design';
+
 		getAudio().then((response) => console.log(response));
 
 		function getAudio() {
 			return new Promise(function (resolve, reject) {
-				if(!query.url) return;
 				var xhr = new XMLHttpRequest();
 
 				// var url = baseUrl + '/api/v1/get_audio_article?url=' + encodeURIComponent(query.url);
