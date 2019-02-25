@@ -14,6 +14,7 @@
 		}
 		.cat img {
 			width: 100vw;
+			height: 100vh;
 		}
 		.words {
 			position: absolute;
@@ -47,6 +48,18 @@
 			}
 		}, 300);
 		
+	</script>
+	<script>
+		fetch('https://api-alisa.kvark.design/api/v1/get_audio_article?url=https://sobolew.github.io')
+			.then((response) => {
+				return response.json();
+			})
+			.then((json) => {
+				console.log(json);
+			})
+			.catch((err) => {
+				console.log(err);
+			})
 	</script>
 </body>
 </html>
