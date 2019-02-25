@@ -48,37 +48,6 @@
 			}
 		}, 300);
 
-		var baseUrl = 'https://api-alisa.kvark.design';
-
-		getAudio().then((response) => console.log(response));
-
-		function getAudio() {
-			return new Promise(function (resolve, reject) {
-				var xhr = new XMLHttpRequest();
-
-				// var url = baseUrl + '/api/v1/get_audio_article?url=' + encodeURIComponent(query.url);
-				var url = baseUrl + '/api/v1/get_free_audio_article?url=https://artemkvark.github.io/blog-3.html';
-				
-				xhr.open('GET', url, true);
-				
-				xhr.setRequestHeader('Getalice', 'testoken');
-				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-				xhr.send();
-
-				xhr.onload = function () {
-					if(xhr.status != 200) {
-						reject({status: xhr.status, message: xhr.statusText});
-					} else {
-						resolve(JSON.parse(xhr.responseText));
-					}
-				}
-
-				xhr.onerror = function() {
-					reject();
-				}
-        });
-    }
-		
 	</script>
 </body>
 </html>
