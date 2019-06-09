@@ -37,12 +37,12 @@
 
 	<script type="text/javascript">
 		const words = document.querySelector('.words span');
-		const loading = 'Loading...'.split('');
+		const loading = 'Loading.......'.split('');
 
 		let i = 0;
 		let interval = setInterval(function(){
 			words.innerHTML +=  loading[i++];
-			if (i === 11) {
+			if (i === 15) {
 				words.innerHTML = '';
 				i = 0;
 			}
