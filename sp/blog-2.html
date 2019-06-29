@@ -132,8 +132,17 @@
                     </div>
                     </div>
             
-                <script src="https://dev-widget.speechki.org/js/common.min.js"></script>
+                <!-- <script src="https://dev-widget.speechki.org/js/common.min.js"></script>
                 <script data-voiced="player">
+                    Speechki.init();
+                </script> -->
+
+                <script data-voiced="player">
+                    (function (w,d,s,o,f,js,fjs) {
+                        w['SPCH']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+                    }(window, document, 'script', 'Speechki', 'https://dev-widget.speechki.org/js/common.min.js'));
                     Speechki.init();
                 </script>
             <div class="post-margin" data-voiced="article">
