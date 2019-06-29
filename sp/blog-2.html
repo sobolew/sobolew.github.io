@@ -138,12 +138,14 @@
                 </script> -->
 
                 <script data-voiced="player">
-                    (function (w,d,s,o,f,js,fjs) {
+                    (function (w,d,s,o,f,cb,js,fjs) {
                         w['SPCH']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
                         js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
                         js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-                    }(window, document, 'script', 'Speechki', 'https://dev-widget.speechki.org/js/common.min.js'));
-                    Speechki.init();
+                        js.onload = cb();
+                    }(window, document, 'script', 'Speechki', 'https://dev-widget.speechki.org/js/common.min.js', function() {
+                        Speechki.init();
+                    }));
                 </script>
             <div class="post-margin" data-voiced="article">
                 <p>Так, 9 ноября президент России Владимир Путин подтвердил ранее высказанные намерения и на форуме межрегионального сотрудничества России и Казахстана в Петропавловске официально пригласил главу Казахстана Нурсултана Назарбаева в Омск. «В следующем году очередь России проводить межрегиональный форум. Хотел бы пригласить вас собраться в сибирском городе Омске», – заявил российский лидер.</p>
