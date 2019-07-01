@@ -132,9 +132,10 @@
                     </div>
             
                     <script data-voiced="player">
-                        (function (w,d,s,o,f,cb,js,fjs) {
-                            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-                            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); js.onload = cb;
+                        (function (w,d,s,o,f,cb,js,ct) {
+                            if(void 0!==w[o]) return cb();
+                            js = d.createElement(s), ct = d.getElementsByTagName(s)[0];
+                            js.id = o; js.src = f; js.async = 1; ct.parentNode.insertBefore(js, ct); js.onload = cb;
                         }(window, document, 'script', 'Speechki', 'https://dev-widget.speechki.org/js/common.min.js', function() {
                             Speechki.init();
                         }));
@@ -147,15 +148,6 @@
 			<!-- Post Tags -->
             
             <div class="post-tags" data-voiced="exclude">
-            <script data-voiced="player">
-                (function (w,d,s,o,f,cb,js,ct) {
-                    if(void 0!==w[o]) return cb();
-                    js = d.createElement(s), ct = d.getElementsByTagName(s)[0];
-                    js.id = o; js.src = f; js.async = 1; ct.parentNode.insertBefore(js, ct); js.onload = cb;
-                }(window, document, 'script', 'Speechki', 'https://dev-widget.speechki.org/js/common.min.js', function() {
-                    Speechki.init();
-                }));
-            </script>
             <span class="fa-stack fa-lg">
                <i class="fa fa-circle fa-stack-2x"></i>
                <i class="fa fa-tags fa-stack-1x fa-inverse"></i>
