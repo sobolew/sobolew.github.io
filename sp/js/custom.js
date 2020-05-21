@@ -13,6 +13,9 @@ window.addEventListener('load', function() {
         });
         Speechki.registerCallback('start', function(event) {
             console.log('start', event);
+        });
+        Speechki.registerCallback('end', function(event) {
+            console.log('end', event);
         })
     }
 })
