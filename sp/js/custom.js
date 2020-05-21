@@ -4,8 +4,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     
     if(Speechki) {
-        console.log('customSpeechki', Speechki);
-        Speechki.registerCallback('pause', onPause);
+        Speechki.onload(function() {
+            console.log('customSpeechki', Speechki);
+            Speechki.registerCallback('pause', onPause);
+        })
+        
     }
 })
 
