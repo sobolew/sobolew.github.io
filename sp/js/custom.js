@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
         Speechki.registerCallback('progress', function (event) {
             console.log('progress', event);
         }, {
-            marks: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            marks: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
         })
     }
 })
