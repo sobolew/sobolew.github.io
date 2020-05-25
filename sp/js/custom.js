@@ -16,6 +16,12 @@ window.addEventListener('load', function() {
         });
         Speechki.registerCallback('end', function(event) {
             console.log('end', event);
+        });
+        Speechki.registerCallback('next', function(event) {
+            console.log('next');
+        });
+        Speechki.registerCallback('prev', function(event) {
+            console.log('prev')
         })
     }
 })
