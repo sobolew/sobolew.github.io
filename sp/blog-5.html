@@ -145,8 +145,25 @@
                         </div>
                     </div>
 
-                    <script
-                        data-voiced="player">!function (e, n, i, t, o, c, r, s) { if (void 0 !== e[t]) return c(); r = n.createElement(i), s = n.getElementsByTagName(i)[0], r.id = t, r.src = "https://dev-widget.speechki.org/js/common.min.js", r.async = 1, s.parentNode.insertBefore(r, s), r.onload = c }(window, document, "script", "Speechki", 0, function () { Speechki.init() });</script>
+                    <script data-voiced="player">
+                        !function (e, n, i, t, o, c, r, s) { if (void 0 !== e[t]) return c(); r = n.createElement(i), s = n.getElementsByTagName(i)[0], r.id = t, r.src = "https://dev-widget.speechki.org/js/common.min.js", r.async = 1, s.parentNode.insertBefore(r, s), r.onload = c }(window, document, "script", "Speechki", 0, function () { Speechki.init({
+                            url: '',
+                            callbacks: {
+                                opened: function(event) {
+                                    console.log('opened', event);
+                                },
+                                play: function(event) {
+                                    console.log('play', event);
+                                },
+                                end: function(event) {
+                                    console.log('end', event);
+                                },
+                                seek: function(event) {
+                                    console.log('seek', event);
+                                }
+                            }
+                        }) });
+                    </script>
                     <div class="post-margin" data-voiced="article">
                         <p>Так, 9 ноября президент России Владимир Путин подтвердил ранее высказанные намерения и на
                             форуме межрегионального сотрудничества России и Казахстана в Петропавловске официально
@@ -433,7 +450,7 @@
         </div>
     </div>
     <!-- End Footer -->
-
+    <script src="js/custom.js"></script>
 
 </body>
 
